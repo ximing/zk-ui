@@ -7,7 +7,7 @@
     "rm": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' +",
     "rm:lock": "find . -name \"package-lock.json\" -type d -prune -exec rm -rf '{}' +",
     "build:server": "tsc -p ./server/tsconfig.json",
-    "build:client": "cd client && npm run build",
+    "build:client": "cd web && npm run build",
     "build": "run-p build:**",
     "pro": "export NODE_ENV=production && cd server && ts-node ./main.ts",
     "dev": "run-p dev:**",
