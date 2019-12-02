@@ -5,6 +5,7 @@
         "target": "esnext",
         "moduleResolution": "node",
         "declaration": true,
+        "esModuleInterop": true,
         "declarationMap": true,
         "allowSyntheticDefaultImports": true,
         "noImplicitAny": false,
