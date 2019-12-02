@@ -1,0 +1,59 @@
+{
+  "name": "mlweb",
+  "version": "1.0.0",
+  "description": "机器学习web",
+  "main": "index.js",
+  "scripts": {
+    "i": "CPPFLAGS=-I/usr/local/opt/openssl/include LDFLAGS=-L/usr/local/opt/openssl/lib npm install",
+    "build:server": "tsc -p ./server/tsconfig.json",
+    "build:client": "cd client && npm run build",
+    "build": "tsc -p ./tsconfig.json",
+    "pro": "export NODE_ENV=production && cd server && ts-node ./src/main.ts",
+    "dev": "ts-node-dev --respawn --dedupe  ./src/main.ts",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ximing/mlweb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ximing/mlweb/issues"
+  },
+  "homepage": "https://github.com/ximing/mlweb#readme",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
+    "lint-staged": "^9.4.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "standard-version": "^7.0.1",
+    "ts-node-dev": "^1.0.0-pre.44"
+  },
+  "dependencies": {
+    "@types/koa": "^2.0.52",
+    "@types/koa-bodyparser": "^4.2.2",
+    "@types/koa-json": "^2.0.18",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-router": "^7.0.42",
+    "@types/lodash": "^4.14.149",
+    "@types/mime": "^2.0.1",
+    "@types/nanoid": "^2.1.0",
+    "@types/node": "^12.12.14",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-is-json": "^1.0.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.15",
+    "mime": "^2.4.4",
+    "moment": "^2.24.0",
+    "nanoid": "^2.1.7",
+    "typescript": "^3.7.2"
+  }
+}
