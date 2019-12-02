@@ -1,7 +1,7 @@
 {
   "name": "mlweb",
   "version": "1.0.0",
-  "description": "机器学习web",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "i": "CPPFLAGS=-I/usr/local/opt/openssl/include LDFLAGS=-L/usr/local/opt/openssl/lib npm install",
@@ -9,8 +9,7 @@
     "build:client": "cd client && npm run build",
     "build": "tsc -p ./tsconfig.json",
     "pro": "export NODE_ENV=production && cd server && ts-node ./src/main.ts",
-    "dev": "ts-node-dev --respawn --dedupe  ./src/main.ts",
-    "precommit": "lint-staged"
+    "dev": "ts-node-dev --respawn --dedupe  ./src/main.ts"
   },
   "repository": {
     "type": "git",
@@ -43,6 +42,7 @@
     "@types/mime": "^2.0.1",
     "@types/nanoid": "^2.1.0",
     "@types/node": "^12.12.14",
+    "@types/socket.io": "^2.1.4",
     "axios": "^0.19.0",
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
@@ -57,6 +57,8 @@
     "mime": "^2.4.4",
     "moment": "^2.24.0",
     "nanoid": "^2.1.7",
+    "node-zookeeper-client": "^1.1.0",
+    "socket.io": "^2.3.0",
     "typescript": "^3.7.2"
   }
 }

@@ -15,5 +15,5 @@ const home = async function(ctx) {
 };
 
 export default function(router) {
-    router.get('*', home);
+    router.get('/', home);
 }
