@@ -1,8 +1,9 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { connect as socketClient } from 'socket.io-client';
 import G6 from '@antv/g6';
+import { observer } from 'mobx-react';
 
-export const ZKDetail: FC<{ url: string }> = props => {
+export const ZKDetail: FC<{ url: string }> = observer(props => {
     const container = useRef<HTMLDivElement>(null);
     const [data, setData] = useState({});
     useEffect(() => {
@@ -109,4 +110,4 @@ export const ZKDetail: FC<{ url: string }> = props => {
             <div ref={container}></div>
         </div>
     );
-};
+});
