@@ -52,7 +52,7 @@
     "koa-static": "^5.0.0",
     "lodash": "^4.17.15",
     "mime": "^2.4.4",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "nanoid": "^2.1.7",
     "typescript": "^3.7.2"
   }
